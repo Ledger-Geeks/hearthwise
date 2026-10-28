@@ -1,0 +1,32 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e9]: Hearthwise
+    - generic [ref=e14]:
+      - generic [ref=e27]:
+        - paragraph [ref=e28]: RAG-powered answers
+        - paragraph [ref=e29]: Grounded in your documents
+      - generic [ref=e34]:
+        - paragraph [ref=e35]: Instant semantic search
+        - paragraph [ref=e36]: Find anything, fast
+      - generic [ref=e41]:
+        - paragraph [ref=e42]: Private & secure
+        - paragraph [ref=e43]: Your data, your control
+    - paragraph [ref=e45]: "\"Good advice is slow-cooked from real evidence. Hearthwise keeps it that way.\""
+  - generic [ref=e49]:
+    - generic [ref=e50]:
+      - heading "Welcome back" [level=1] [ref=e51]
+      - paragraph [ref=e52]: Sign in to your account to continue
+    - generic [ref=e53]:
+      - generic [ref=e54]:
+        - generic [ref=e55]: Email address
+        - textbox "you@example.com" [ref=e57]
+      - generic [ref=e58]:
+        - generic [ref=e59]: Password
+        - generic [ref=e60]:
+          - textbox "Your password" [ref=e61]
+          - button [ref=e62] [cursor=pointer]
+      - button "Sign in" [ref=e66] [cursor=pointer]
+    - paragraph [ref=e70]:
+      - text: No account?
+      - link "Create one free" [ref=e71] [cursor=pointer]:
+        - /url: /register

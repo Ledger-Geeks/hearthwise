@@ -1,0 +1,155 @@
+- generic [ref=f13e3]:
+  - navigation [ref=f13e4]:
+    - generic [ref=f13e5]:
+      - link "Hearthwise" [ref=f13e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f13e11]:
+        - link "Features" [ref=f13e12] [cursor=pointer]:
+          - /url: "#features"
+        - link "How it works" [ref=f13e13] [cursor=pointer]:
+          - /url: "#how"
+        - link "FAQ" [ref=f13e14] [cursor=pointer]:
+          - /url: "#faq"
+      - generic [ref=f13e15]:
+        - link "Sign in" [ref=f13e16] [cursor=pointer]:
+          - /url: /login
+        - link "Get started" [ref=f13e17] [cursor=pointer]:
+          - /url: /register
+  - generic [ref=f13e20]:
+    - generic [ref=f13e21]:
+      - generic [ref=f13e22]: Grounded AI for food & nutrition research
+      - heading "Nutrition wisdom, kindled from your shelf" [level=1] [ref=f13e25]: Nutrition wisdom,kindled from your shelf
+      - paragraph [ref=f13e26]: Upload documents, ask questions in plain English, get precise answers grounded in evidence — not hallucinations.
+      - generic [ref=f13e27]:
+        - link "Start for free" [ref=f13e28] [cursor=pointer]:
+          - /url: /register
+        - link "Sign in" [ref=f13e31] [cursor=pointer]:
+          - /url: /login
+    - generic [ref=f13e33]:
+      - generic [ref=f13e43]:
+        - paragraph [ref=f13e44]: plant-protein-guide.pdf
+        - paragraph [ref=f13e45]: Chunked & indexed
+      - generic [ref=f13e54]:
+        - paragraph [ref=f13e55]: Retrieved 5 passages
+        - paragraph [ref=f13e56]: Semantic match across your library
+      - generic [ref=f13e57]:
+        - generic [ref=f13e58]: What are the best plant-based complete protein sources?
+        - generic [ref=f13e60]: "From your documents: quinoa (all 9 essential amino acids), edamame (18g per cup) and tempeh (31g per cup) rank highest."
+  - generic [ref=f13e74]:
+    - generic [ref=f13e76]:
+      - paragraph [ref=f13e77]: PDF · TXT
+      - paragraph [ref=f13e78]: Supported formats
+    - generic [ref=f13e80]:
+      - paragraph [ref=f13e81]: 10 MB
+      - paragraph [ref=f13e82]: Per file
+    - generic [ref=f13e84]:
+      - paragraph [ref=f13e85]: Top 5
+      - paragraph [ref=f13e86]: Passages per answer
+    - generic [ref=f13e88]:
+      - paragraph [ref=f13e89]: "2"
+      - paragraph [ref=f13e90]: LLM providers
+  - generic [ref=f13e91]:
+    - generic [ref=f13e92]:
+      - paragraph [ref=f13e93]: Everything included
+      - heading "Built for precision" [level=2] [ref=f13e94]
+      - paragraph [ref=f13e95]: Hover the stack — each card pulls forward.
+    - generic [ref=f13e96]:
+      - article [ref=f13e97]:
+        - heading "RAG-Powered Answers" [level=3] [ref=f13e109]
+        - paragraph [ref=f13e110]: Retrieval-augmented generation grounds every answer in your actual documents — no hallucinations.
+      - article [ref=f13e111]:
+        - heading "Smart Document Processing" [level=3] [ref=f13e117]
+        - paragraph [ref=f13e118]: Upload PDFs and text files. Automatic chunking, embedding, and vector indexing in seconds.
+      - article [ref=f13e119]:
+        - heading "Semantic Search" [level=3] [ref=f13e124]
+        - paragraph [ref=f13e125]: Find relevant content even when you use different words or phrasing.
+      - article [ref=f13e126]:
+        - heading "Conversational AI" [level=3] [ref=f13e130]
+        - paragraph [ref=f13e131]: Chat naturally with your knowledge base. Follow-ups, clarifications, deep exploration.
+      - article [ref=f13e132]:
+        - heading "Private by Design" [level=3] [ref=f13e136]
+        - paragraph [ref=f13e137]: Your documents stay in your private project space. Full control, no shared knowledge.
+      - article [ref=f13e138]:
+        - heading "Vector Database" [level=3] [ref=f13e144]
+        - paragraph [ref=f13e145]: Powered by pgvector or Qdrant for fast similarity search.
+  - generic [ref=f13e146]:
+    - generic [ref=f13e147]:
+      - paragraph [ref=f13e148]: Simple workflow
+      - heading "Three steps to insight" [level=2] [ref=f13e149]
+    - generic [ref=f13e150]:
+      - generic [ref=f13e152]:
+        - generic [ref=f13e153]: "1"
+        - generic [ref=f13e158]:
+          - heading "Upload documents" [level=3] [ref=f13e159]
+          - paragraph [ref=f13e160]: Drop in PDFs and text files — research papers, guidelines, nutrition data.
+      - generic [ref=f13e161]:
+        - generic [ref=f13e162]: "2"
+        - generic [ref=f13e166]:
+          - heading "Process & index" [level=3] [ref=f13e167]
+          - paragraph [ref=f13e168]: Your content is chunked, embedded, and stored in a vector database.
+      - generic [ref=f13e169]:
+        - generic [ref=f13e170]: "3"
+        - generic [ref=f13e175]:
+          - heading "Ask & get answers" [level=3] [ref=f13e176]
+          - paragraph [ref=f13e177]: Query your knowledge base in plain English, get precise sourced answers.
+  - generic [ref=f13e178]:
+    - generic [ref=f13e179]:
+      - paragraph [ref=f13e180]: Who it's for
+      - heading "A hearth for every kitchen" [level=2] [ref=f13e181]
+    - generic [ref=f13e182]:
+      - article [ref=f13e183]:
+        - generic [ref=f13e188]:
+          - heading "Dietitians" [level=3] [ref=f13e189]
+          - paragraph [ref=f13e190]: Answer client questions straight from the guidelines you already trust.
+      - article [ref=f13e191]:
+        - generic [ref=f13e196]:
+          - heading "Researchers" [level=3] [ref=f13e197]
+          - paragraph [ref=f13e198]: Interrogate a stack of papers without rereading every methods section.
+      - article [ref=f13e199]:
+        - generic [ref=f13e203]:
+          - heading "Home cooks" [level=3] [ref=f13e204]
+          - paragraph [ref=f13e205]: Turn cookbooks and nutrition labels into a kitchen-side assistant.
+      - article [ref=f13e206]:
+        - generic [ref=f13e215]:
+          - heading "Coaches" [level=3] [ref=f13e216]
+          - paragraph [ref=f13e217]: Build meal guidance on evidence, not on whatever trended this week.
+  - generic [ref=f13e218]:
+    - generic [ref=f13e219]:
+      - paragraph [ref=f13e220]: Ask it anything
+      - heading "Questions it loves" [level=2] [ref=f13e221]
+    - generic [ref=f13e222]:
+      - generic [ref=f13e223]:
+        - generic [ref=f13e224]: How does fiber affect gut microbiome diversity?
+        - generic [ref=f13e226]: Your uploaded reviews link higher fermentable-fiber intake with greater microbial diversity, mainly via short-chain fatty acid production.
+        - generic [ref=f13e231]: Ask a question about your documents…
+      - generic [ref=f13e236]:
+        - generic [ref=f13e237]: Which foods are highest in iron per serving?
+        - generic [ref=f13e240]: Compare whey and pea protein absorption.
+        - generic [ref=f13e243]: What do my guidelines say about sodium limits?
+        - generic [ref=f13e246]: Summarize the omega-3 findings in this review.
+  - generic [ref=f13e249]:
+    - generic [ref=f13e250]:
+      - paragraph [ref=f13e251]: Good to know
+      - heading "Questions, answered" [level=2] [ref=f13e252]
+    - generic [ref=f13e253]:
+      - group [ref=f13e254]:
+        - generic [ref=f13e255] [cursor=pointer]
+      - group [ref=f13e258]:
+        - generic [ref=f13e259] [cursor=pointer]
+      - group [ref=f13e262]:
+        - generic [ref=f13e263] [cursor=pointer]
+      - group [ref=f13e266]:
+        - generic [ref=f13e267] [cursor=pointer]
+  - generic [ref=f13e271]:
+    - heading "Light up your library" [level=2] [ref=f13e275]
+    - paragraph [ref=f13e276]: Join and get precise, evidence-based answers from your own documents in minutes.
+    - generic [ref=f13e277]:
+      - link "Create free account" [ref=f13e278] [cursor=pointer]:
+        - /url: /register
+      - link "Sign in" [ref=f13e281] [cursor=pointer]:
+        - /url: /login
+  - contentinfo [ref=f13e282]:
+    - generic [ref=f13e283]:
+      - generic [ref=f13e284]: Hearthwise
+      - paragraph [ref=f13e288]: © 2026 Hearthwise · Nutrition wisdom, kindled from your shelf
+  - button "Open demo chat" [ref=f13e290] [cursor=pointer]

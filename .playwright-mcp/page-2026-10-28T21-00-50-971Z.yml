@@ -1,0 +1,35 @@
+- generic [ref=f30e3]:
+  - generic [ref=f30e5]:
+    - link "Hearthwise" [ref=f30e6] [cursor=pointer]:
+      - /url: /
+    - img "Hearthwise flame mascot waving from a stack of books, surrounded by smiling fruits and vegetables" [ref=f30e12]
+    - generic [ref=f30e92]:
+      - generic [ref=f30e93]:
+        - generic [ref=f30e94]: RAG-powered answers
+        - generic [ref=f30e105]: Instant semantic search
+        - generic [ref=f30e108]: Private & secure
+      - paragraph [ref=f30e111]: "\"Good advice is slow-cooked from real evidence. Hearthwise keeps it that way.\""
+  - generic [ref=f30e117]:
+    - generic [ref=f30e118]:
+      - generic [ref=f30e119]:
+        - heading "Welcome back" [level=1] [ref=f30e123]:
+          - generic [ref=f30e124]:
+            - generic [ref=f30e125]: Welcome
+            - generic [ref=f30e127]: back
+        - paragraph [ref=f30e129]: Sign in to pick up where you left off
+      - generic [ref=f30e130]:
+        - generic [ref=f30e131]:
+          - generic [ref=f30e132]: Email address
+          - textbox "Email address" [ref=f30e134]:
+            - /placeholder: you@example.com
+        - generic [ref=f30e135]:
+          - generic [ref=f30e136]: Password
+          - generic [ref=f30e137]:
+            - textbox "Password" [ref=f30e138]:
+              - /placeholder: Your password
+            - button "Show password" [ref=f30e139] [cursor=pointer]
+        - button "Sign in" [ref=f30e143] [cursor=pointer]
+    - paragraph [ref=f30e148]:
+      - text: No account?
+      - link "Create one free" [ref=f30e149] [cursor=pointer]:
+        - /url: /register

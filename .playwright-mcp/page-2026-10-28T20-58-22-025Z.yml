@@ -1,0 +1,42 @@
+- generic [ref=f27e3]:
+  - generic [ref=f27e5]:
+    - link "Hearthwise" [ref=f27e6] [cursor=pointer]:
+      - /url: /
+    - img "Hearthwise flame mascot in a chef hat stirring a pot while fruits and vegetables hop in" [ref=f27e12]
+    - generic [ref=f27e104]:
+      - paragraph [ref=f27e105]: What you get for free
+      - list [ref=f27e106]:
+        - listitem [ref=f27e107]:
+          - generic [ref=f27e111]: Upload unlimited documents
+        - listitem [ref=f27e112]:
+          - generic [ref=f27e116]: AI-powered RAG question answering
+        - listitem [ref=f27e117]:
+          - generic [ref=f27e121]: Semantic vector search
+        - listitem [ref=f27e122]:
+          - generic [ref=f27e126]: Private knowledge base
+  - generic [ref=f27e130]:
+    - generic [ref=f27e131]:
+      - heading "Create your account" [level=1] [ref=f27e132]
+      - paragraph [ref=f27e133]: Start building your nutrition knowledge base
+    - generic [ref=f27e134]:
+      - generic [ref=f27e135]:
+        - generic [ref=f27e136]: Full name (optional)
+        - textbox "Jane Doe" [ref=f27e138]
+      - generic [ref=f27e139]:
+        - generic [ref=f27e140]: Username
+        - generic [ref=f27e141]:
+          - generic: "@"
+          - textbox "janedoe" [ref=f27e142]
+      - generic [ref=f27e143]:
+        - generic [ref=f27e144]: Email address
+        - textbox "you@example.com" [ref=f27e146]
+      - generic [ref=f27e147]:
+        - generic [ref=f27e148]: Password
+        - generic [ref=f27e149]:
+          - textbox "At least 6 characters" [ref=f27e150]
+          - button [ref=f27e151] [cursor=pointer]
+      - button "Create free account" [ref=f27e155] [cursor=pointer]
+    - paragraph [ref=f27e159]:
+      - text: Already have an account?
+      - link "Sign in" [ref=f27e160] [cursor=pointer]:
+        - /url: /login
