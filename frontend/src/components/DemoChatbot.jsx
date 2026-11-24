@@ -10,7 +10,7 @@ const DEMO_SCRIPT = [
 ]
 
 const ERRORS = {
-  503: 'Live answers are off. Add OPENAI_API_KEY to src/.env and restart the backend.',
+  503: 'Live answers are off. Add OPENROUTER_API_KEY to src/.env and restart the backend.',
   429: 'Easy there — too many messages. Try again in a minute.',
 }
 
@@ -77,7 +77,8 @@ export default function DemoChatbot() {
       const { data } = await demoApi.chat(history.slice(-12))
       setMessages(m => [...m, { role: 'assistant', content: data.answer }])
     } catch (err) {
-      const msg = ERRORS[err.response?.status] || 'Something went wrong. Is the backend running?'
+      // The daily-limit 429 carries its own message; the per-minute one doesn't
+      const msg = err.response?.data?.error || ERRORS[err.response?.status] || 'Something went wrong. Is the backend running?'
       setMessages(m => [...m, { role: 'assistant', content: msg, error: true }])
     } finally {
       setTyping(false)

@@ -9,6 +9,7 @@ from routes.auth import auth_router
 from routes.demo import demo_router
 from helpers.config import get_settings
 from stores.llm.LLMProviderFactory import LLMProviderFactory
+from stores.llm.LLMEnums import LLMEnums
 from stores.vectordb.VectorDBProviderFactory import VectorDBProviderFactory
 from stores.llm.templates.TemplateParser import TemplateParser
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
@@ -65,7 +66,11 @@ async def startup_span():
     vectordb_provider_factory = VectorDBProviderFactory(config=settings, db_client=app.db_client)
 
     app.generation_client = llm_provider_factory.create(provider_name=settings.GENERATION_BACKEND)
-    app.generation_client.set_generation_model(model_id=settings.GENERATION_MODEL_ID)
+    app.generation_client.set_generation_model(
+        model_id=settings.OPENROUTER_MODEL
+        if settings.GENERATION_BACKEND == LLMEnums.OPENROUTER.value
+        else settings.GENERATION_MODEL_ID
+    )
 
     app.embedding_client = llm_provider_factory.create(provider_name=settings.EMBEDDING_BACKEND)
     app.embedding_client.set_embedding_model(

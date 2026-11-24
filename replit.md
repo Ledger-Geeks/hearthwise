@@ -36,7 +36,7 @@ bash dev.sh
 ```bash
 # 1. Copy and fill in environment variables
 cp src/.env.example src/.env
-# Edit src/.env — set POSTGRES_*, COHERE_API_KEY, JWT_SECRET_KEY
+# Edit src/.env — set POSTGRES_*, OPENROUTER_API_KEY, JWT_SECRET_KEY
 
 # 2. Install Python deps
 pip install -r src/requirements.txt
@@ -119,10 +119,12 @@ src/                               # FastAPI backend
 | Variable | Required | Description |
 |---|---|---|
 | `POSTGRES_*` | Yes | PostgreSQL connection (auto-set by Replit) |
-| `COHERE_API_KEY` | Yes* | Cohere API key (*or OpenAI) |
+| `OPENROUTER_API_KEY` | Yes | OpenRouter key for chat and embeddings (https://openrouter.ai/keys) |
+| `OPENROUTER_MODEL` | No | Chat model id (default: `openai/gpt-4o-mini`) |
+| `AI_DAILY_LIMIT` | No | AI answers per user/IP per UTC day (default: 5) |
 | `JWT_SECRET_KEY` | Yes | Random secret for JWT signing |
 | `ALLOWED_ORIGINS` | No | CORS origins, comma-separated or `*` |
-| `GENERATION_BACKEND` | No | `COHERE` or `OPENAI` (default: COHERE) |
+| `GENERATION_BACKEND` | No | `OPENROUTER`, `OPENAI` or `COHERE` (default: OPENROUTER) |
 | `VECTOR_DB_BACKEND` | No | `PGVECTOR` or `QDRANT` (default: PGVECTOR) |
 
 Generate a strong JWT secret:
@@ -134,7 +136,7 @@ python3 -c "import secrets; print(secrets.token_hex(32))"
 
 - [ ] Set `JWT_SECRET_KEY` to a strong random value in `src/.env`
 - [ ] Set `ALLOWED_ORIGINS` to your actual domain (not `*`)
-- [ ] Set your `COHERE_API_KEY` or `OPENAI_API_KEY`
+- [ ] Set your `OPENROUTER_API_KEY`
 - [ ] Ensure `src/.env` is NOT committed (it's in `.gitignore`)
 
 ## Tech Stack

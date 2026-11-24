@@ -7,3 +7,4 @@ from .data_chunk import DataChunk, RetrievedDocument
 from .project import Project
 from .user import User
 from .email_verification import EmailVerification
+from .ai_usage import AIUsage

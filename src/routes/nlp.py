@@ -7,6 +7,7 @@ import logging
 from controllers import NLPController
 from models import ResponseSignal
 from tqdm.auto import tqdm
+from helpers.ai_quota import ai_quota
 
 
 logger = logging.getLogger("uvicorn.error")
@@ -220,6 +221,10 @@ async def answer_rag(request: Request, project_id: int, search_request: SearchRe
     Returns:
         JSONResponse: A JSON response containing the answer.
     """
+
+    # Counted before retrieval: a failed answer still uses one of today's requests.
+    if limited := await ai_quota(request):
+        return limited
 
     project_model = await ProjectModel.create_instance(db_client=request.app.db_client)
     project = await project_model.get_or_create_project(project_id=project_id)

@@ -59,7 +59,7 @@ export default function Chat() {
     } catch (err) {
       setMessages(m => [...m, {
         id: Date.now() + 1, role: 'error',
-        content: err.response?.data?.Signal || 'Could not get an answer. Make sure you have uploaded and indexed documents.',
+        content: err.response?.data?.error || err.response?.data?.Signal || 'Could not get an answer. Make sure you have uploaded and indexed documents.',
       }])
     } finally {
       setLoading(false)

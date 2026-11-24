@@ -8,6 +8,7 @@ class LLMEnums(Enum):
 
     OPENAI = "OPENAI"
     COHERE = "COHERE"
+    OPENROUTER = "OPENROUTER"
 
 
 class OpenAIEnums(Enum):

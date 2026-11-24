@@ -25,13 +25,20 @@ class Settings(BaseSettings):
     POSTGRES_MAIN_DATABASE: str
 
     # LLM settings
-    GENERATION_BACKEND: str
+    GENERATION_BACKEND: str = "OPENROUTER"
     EMBEDDING_BACKEND: str
 
     # API keys
+    OPENROUTER_API_KEY: Optional[str] = None
     OPENAI_API_KEY: str = None
     OPENAI_API_URL: str = None
     COHERE_API_KEY: str = None
+
+    # Generation model when GENERATION_BACKEND is OPENROUTER (other backends use GENERATION_MODEL_ID)
+    OPENROUTER_MODEL: str = "openai/gpt-4o-mini"
+
+    # AI answers allowed per signed-in user (or per IP when signed out) per UTC day
+    AI_DAILY_LIMIT: int = 5
 
     # Model settings
     GENERATION_MODEL_ID_LITERAL: List[str] = None

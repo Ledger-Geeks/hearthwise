@@ -7,6 +7,8 @@ from fastapi.concurrency import run_in_threadpool
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
+from helpers.ai_quota import ai_quota
+
 logger = logging.getLogger("uvicorn.error")
 
 # Public landing-page chatbot: no auth, no documents, so it answers from the model alone.
@@ -56,6 +58,9 @@ async def demo_chat(request: Request, body: DemoChatRequest):
 
     if body.messages[-1].role != "user":
         return JSONResponse(status_code=400, content={"signal": "demo_last_message_must_be_user"})
+
+    if limited := await ai_quota(request):
+        return limited
 
     client = request.app.generation_client
     roles = {"user": client.enums.USER.value, "assistant": client.enums.ASSISTANT.value}

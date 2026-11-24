@@ -50,7 +50,8 @@ The name joins *hearth* (the kitchen fire at the centre of a home) and *wise*. T
 
 - **RAG pipeline**: Upload → Chunk → Embed → Index → Retrieve → Generate
 - **Semantic search**: vector similarity search with pgvector (Qdrant also supported)
-- **Swappable providers**: OpenAI or Cohere for generation and embeddings, chosen in `.env`
+- **Swappable providers**: OpenRouter (default), OpenAI or Cohere for generation and embeddings, chosen in `.env`
+- **Daily AI limit**: `AI_DAILY_LIMIT` answers per user (or IP when signed out) per UTC day, stored in PostgreSQL
 - **Auth with email verification**: register → 6-digit OTP by email → JWT session
 - **Demo chatbot**: public, rate-limited assistant on the landing page
 - **Claymorphism UI**: animated React interface (Framer Motion) with cartoon auth illustrations
@@ -168,7 +169,7 @@ Tables are created automatically when the backend starts.
 cp src/.env.example src/.env
 ```
 
-The example file defaults to Cohere. For OpenAI, set:
+The example file uses OpenRouter for both chat and embeddings. Set at least:
 
 ```env
 POSTGRES_USERNAME="postgres"
@@ -180,12 +181,15 @@ POSTGRES_MAIN_DATABASE="hearthwise"
 # python -c "import secrets; print(secrets.token_hex(32))"
 JWT_SECRET_KEY="<64-char random hex>"
 
-GENERATION_BACKEND="OPENAI"
-EMBEDDING_BACKEND="OPENAI"
-OPENAI_API_KEY="sk-..."
-GENERATION_MODEL_ID="gpt-4o-mini"
-EMBEDDING_MODEL_ID="text-embedding-3-small"
-EMBEDDING_MODEL_SIZE=1536
+GENERATION_BACKEND="OPENROUTER"
+EMBEDDING_BACKEND="OPENROUTER"
+OPENROUTER_API_KEY="sk-or-..."            # https://openrouter.ai/keys
+OPENROUTER_MODEL="openai/gpt-4o-mini"
+EMBEDDING_MODEL_ID="openai/text-embedding-3-small"
+EMBEDDING_MODEL_SIZE=1536                 # must match the embedding model
+
+# AI answers per signed-in user (or per IP when signed out) per UTC day; over it the API returns 429
+AI_DAILY_LIMIT=5
 
 # Optional: real OTP emails. Leave SMTP_HOST empty and codes are printed in the backend log.
 SMTP_HOST="smtp.gmail.com"
@@ -257,7 +261,7 @@ Base URL: `/api/v1` · Docs: `/api/docs` (Swagger) · `/api/redoc`
 
 | Method | Endpoint | Description |
 |---|---|---|
-| `POST` | `/demo/chat` | Public landing-page chatbot (10 requests/min per IP, short replies) |
+| `POST` | `/demo/chat` | Public landing-page chatbot (10 requests/min per IP, short replies; counts toward the daily AI limit) |
 
 ---
 
